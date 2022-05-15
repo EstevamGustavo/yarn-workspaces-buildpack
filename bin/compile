@@ -27,4 +27,4 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "access ${APP_BASE} app successfully" | indent
+echo "access ${BUILD_DIR}/${APP_BASE} app successfully" | indent
