@@ -18,7 +18,7 @@ fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 (
-    cd "${BUILD_DIR}/${APP_BASE}"
+    cd "${APP_BASE}"
     
 )
 
