@@ -10,6 +10,7 @@ indent() {
 BUILD_DIR="$1"
 CACHE_DIR="$2"
 ENV_DIR="$3"
+STAGE="$(mktemp -d)"
 
 if [ ! -f "${ENV_DIR}/APP_BASE" ]; then
     echo "APP_BASE was not set. Aborting" | indent
