@@ -19,8 +19,10 @@ APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 (
     echo "cd ${BUILD_DIR}/${APP_BASE}"
-    cd "${BUILD_DIR}/${APP_BASE}"
-    cp "${BUILD_DIR}/${PROCFILE}" "${BUILD_DIR}/Procfile"
+    cp "${BUILD_DIR}/yarn.lock" "${BUILD_DIR}/${APP_BASE}/yarn.lock"
+    mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
+    rm -rf "${BUILD_DIR}"/* &&
+    mv "${STAGE}/$(basename "$APP_BASE")"/* "${BUILD_DIR}"
     
 )
 
