@@ -20,6 +20,7 @@ APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 (
     echo "cd ${BUILD_DIR}/${APP_BASE}"
     cd "${BUILD_DIR}/${APP_BASE}"
+    cp "${BUILD_DIR}/${PROCFILE}" "${BUILD_DIR}/Procfile"
     
 )
 
